@@ -5,6 +5,7 @@ import de.srendi.advancedperipherals.common.addons.computercraft.proxyintegratio
 import de.srendi.advancedperipherals.common.addons.computercraft.proxyintegrations.botania.ManaFlowerIntegration;
 import de.srendi.advancedperipherals.common.addons.computercraft.proxyintegrations.botania.ManaPoolIntegration;
 import de.srendi.advancedperipherals.common.addons.computercraft.proxyintegrations.botania.SpreaderIntegration;
+import de.srendi.advancedperipherals.common.addons.computercraft.proxyintegrations.create.SchematicannonIntegration;
 import de.srendi.advancedperipherals.common.addons.computercraft.proxyintegrations.immersiveengineering.CapacitorIntegration;
 import de.srendi.advancedperipherals.common.addons.computercraft.proxyintegrations.immersiveengineering.RedstoneConnectorIntegration;
 import de.srendi.advancedperipherals.common.addons.computercraft.proxyintegrations.immersiveengineering.RedstoneProbeIntegration;
@@ -45,6 +46,9 @@ public class ProxyIntegrationRegistry {
             registerIntegration(new RedstoneProbeIntegration());
             registerIntegration(new RedstoneConnectorIntegration());
             registerIntegration(new CapacitorIntegration());
+        }
+        if (ModList.get().isLoaded("create")) {
+            registerIntegration(new SchematicannonIntegration());
         }
     }
 

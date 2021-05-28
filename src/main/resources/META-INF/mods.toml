@@ -50,3 +50,9 @@ mandatory = false
 versionRange = "[1.9.12,)"
 ordnering = "NONE"
 side = "BOTH"
+[[dependencies.advancedperipherals]]
+modId = "create"
+mandatory = false
+versionRange = "[mc1.16.5_v0.3.1c,)"
+ordnering = "NONE"
+side = "BOTH"

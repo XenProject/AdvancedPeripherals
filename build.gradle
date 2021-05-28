@@ -125,6 +125,7 @@ dependencies {
     implementation fg.deobf("mekanism:Mekanism:${mekanism_version}")
     implementation fg.deobf("mekanism:Mekanism:${mekanism_version}:generators")
 
+    implementation fg.deobf("curse.maven:create-328085:3278516")
     compileOnly fg.deobf("curse.maven:ie-231951:3233018")
 
     //Mods to test stuff(Not required mods)
