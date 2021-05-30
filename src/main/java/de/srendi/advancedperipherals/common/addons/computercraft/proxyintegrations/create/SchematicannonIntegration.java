@@ -1,5 +1,6 @@
 package de.srendi.advancedperipherals.common.addons.computercraft.proxyintegrations.create;
 
+import com.simibubi.create.AllItems;
 import com.simibubi.create.content.schematics.block.SchematicannonTileEntity;
 import dan200.computercraft.api.lua.LuaFunction;
 import de.srendi.advancedperipherals.common.addons.computercraft.base.ProxyIntegration;
@@ -51,8 +52,18 @@ public class SchematicannonIntegration extends ProxyIntegration<SchematicannonTi
     }
 
     @LuaFunction
+    public final void setState(SchematicannonTileEntity.State value) {
+        getTileEntity().state = value;
+    }
+
+    @LuaFunction
     public final float getFuelLevel() {
         return getTileEntity().fuelLevel;
+    }
+
+    @LuaFunction
+    public final boolean hasSchematic() {
+        return getTileEntity().inventory.getStackInSlot(0).isItemEqual(AllItems.SCHEMATIC.asStack());
     }
 
     @LuaFunction
